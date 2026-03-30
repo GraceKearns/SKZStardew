@@ -1,0 +1,10 @@
+{
+  "Name": "Stray Kids Felix Npc",
+  "Author": "Billie & Grace",
+  "Version": "1.0.0",
+  "Description": "Adds Felix from 'Stray Kids' as a stardew npc",
+  "UniqueID": "straykidsFelix.MyCustomNPC",
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher"
+  }
+}

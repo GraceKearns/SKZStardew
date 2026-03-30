@@ -1,0 +1,9 @@
+{
+    "spring": "620 StayHotel 20 27 2/730 Town 38 62 2/1800 StayHotelFelix 5 11 2",
+    "summer": "620 StayHotel 20 26 2/800 Beach 46 21 2/1400 Town 83 24 3/1800 StayHotelFelix 5 11 2",
+    "fall":"620 StayHotel 21 26 2/800 Backwoods 43 16 2/1400 Forest 102 23 0/1800 StayHotelFelix 5 11 2",
+    "winter":"800 StayHotel 21 26 2/1000 Beach 10 10 3/1600 Forest 102 23 0/1800 StayHotelFelix 5 11 2",
+    "rain": "1130 Saloon 1 19 0/1130 StayHotelFelix 5 11 2",
+    "rain2": "1030 Saloon 1 19 0/1030 StayHotelFelix 5 11 2"
+
+}

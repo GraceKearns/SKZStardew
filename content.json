@@ -1,0 +1,187 @@
+{
+    "Format": "2.8.0",
+    "Changes": [
+        {
+            "Action": "Load",
+            "Target": "Characters/{{ModId}}_SKZFelix",
+            "FromFile": "Characters/SKZFelix.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Portraits/{{ModId}}_SKZFelix",
+            "FromFile": "Portraits/SKZFelix.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/{{ModId}}_SKZFelix_Winter",
+            "FromFile": "Characters/SKZFelixWinter.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Portraits/{{ModId}}_SKZFelix_Winter",
+            "FromFile": "Portraits/SKZFelixWinter.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/Dialogue/{{ModId}}_SKZFelix",
+            "FromFile": "Dialogue/SKZFelix.json"
+        },
+        {
+            "Action": "Load",
+            "Target": "Maps/{{ModId}}_StayHotel",
+            "FromFile": "Tilesets/StayHotel.tmx"
+        },
+        {
+            "Action": "Load",
+            "Target": "Maps/BusStop",
+            "FromFile": "Tilesets/BusStop.tmx"
+        },
+        {
+            "Action": "Load",
+            "Target": "Maps/{{ModId}}_StayHotel_Felix",
+            "FromFile": "Tilesets/StayHotel_Felix.tmx"
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Locations",
+            "Entries": {
+                "StayHotel": {
+                    "DisplayName": "Stay Hotel",
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/{{ModId}}_StayHotel",
+                        "AlwaysActive": true
+                    }
+                }
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Locations",
+            "Entries": {
+                "StayHotelFelix": {
+                    "DisplayName": "Stay Hotel Felix's Room",
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/{{ModId}}_StayHotel_Felix",
+                        "AlwaysActive": true
+                    }
+                }
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/BusStop",
+            "AddWarps": [
+                "35 0 StayHotel 20 38",
+                "36 0 StayHotel 21 38",
+                "37 0 StayHotel 22 38"
+            ]
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/{{ModId}}_StayHotel",
+            "AddWarps": [
+                "20 39 BusStop 35 1",
+                "21 39 BusStop 36 1",
+                "22 39 BusStop 37 1"
+            ]
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/{{ModId}}_StayHotel_Felix",
+            "AddWarps": [
+                "8 15 StayHotel 25 25"
+            ]
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/{{ModId}}_StayHotel",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 25,
+                        "Y": 24
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "LockedDoorWarp 8 14 StayHotelFelix 630 2200",
+                        "Text": "It's locked."
+                    }
+                }
+            ]
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "{{ModId}}_SKZFelix": {
+                    "DisplayName": "Felix",
+                    "BirthSeason": "Spring",
+                    "BirthDay": 14,
+                    "HomeRegion": "Town",
+                    "Gender": "Male",
+                    "Age": "Adult",
+                    "Manner": "Polite",
+                    "SocialAnxiety": "Neutral",
+                    "Optimism": "Positive",
+                    "CanBeRomanced": true,
+                    "Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "StayHotelFelix",
+                            "Tile": {
+                                "X": 6,
+                                "Y": 5
+                            },
+                            "Direction": "right"
+                        }
+                    ],
+                    "Appearance": [
+                        {
+                            "Id": "Default",
+                            "Interval": "Any",
+                            "Portrait": "Portraits/{{ModId}}_SKZFelix",
+                            "Sprite": "Characters/{{ModId}}_SKZFelix",
+                            "Precedence": 2
+                        },
+                        {
+                            "LogName": "Seasonal Portraits - Winter Felix",
+                            "Id": "{{ModId}}_WinterFelixOutfit",
+                            "Season": "winter",
+                            "Portrait": "Portraits/{{ModId}}_SKZFelix_Winter",
+                            "Sprite": "Characters/{{ModId}}_SKZFelix_Winter",
+                            "Precedence": -1
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/Saloon",
+            "Entries": {
+               "{{ModId}}_FelixEvent/f {{ModId}}_SKZFelix 0/Time 600 2600": "none/follow/farmer 14 23 0 {{ModId}}_SKZFelix 14 18 2/skippable/viewport 14 20 clamp/pause 500/move farmer 0 -2 0/speak {{ModId}}_SKZFelix \"Hey there.\"/end"
+
+            }
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/schedules/{{ModId}}_SKZFelix",
+            "FromFile": "Schedule/schedule.json"
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/{{ModId}}_NPCGiftTastes",
+            "Entries": {
+                "{{ModId}}_SKZFelix": "You're giving this to me? This is amazing!/207 232 233 400/Thank you! This is a very interesting specimen./-5 -79 422/...What is this?/80 330/This is disgusting./2/That was very thoughtful of you./-4/ "
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/{{ModId}}_EngagementDialogue",
+            "Entries": {
+                "{{ModId}}_SKZFelix0": "I can't believe I am about to be married!$h",
+                "{{ModId}}_SKZFelix1": "I hope I don't get cold feet"
+            }
+        }
+    ]
+}
