@@ -63,11 +63,24 @@ jobs:
           git tag ${{ steps.bump_version.outputs.new_tag }}
           git push origin ${{ steps.bump_version.outputs.new_tag }}
 
+      - name: Generate patch notes from previous commits
+        id: patch_notes
+        run: |
+          latest_tag=${{ steps.get_tag.outputs.latest_tag }}
+          if [ "$latest_tag" = "v0.0.0" ]; then
+            git log --pretty=format:"* %s" > PATCH_NOTES.txt
+          else
+            git log $latest_tag..HEAD --pretty=format:"* %s" > PATCH_NOTES.txt
+          fi
+          echo 'patch_notes<<EOF' >> $GITHUB_OUTPUT
+          cat PATCH_NOTES.txt >> $GITHUB_OUTPUT
+          echo 'EOF' >> $GITHUB_OUTPUT
+
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.bump_version.outputs.new_tag }}
           name: ${{ github.event.inputs.release_name }}
-          generate_release_notes: true
+          body: ${{ steps.patch_notes.outputs.patch_notes }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
