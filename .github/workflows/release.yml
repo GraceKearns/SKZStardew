@@ -4,7 +4,7 @@ on:
       release_name:
         description: 'Release name'
         required: true
-        default: 'Custom Release'
+        default: 'New Release'
       increment:
         description: 'Version increment (major, minor, patch)'
         required: true
