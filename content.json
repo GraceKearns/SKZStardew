@@ -13,6 +13,16 @@
         },
         {
             "Action": "Load",
+            "Target": "Characters/{{ModId}}_SKZBangChan",
+            "FromFile": "Characters/SKZBangChan.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Portraits/{{ModId}}_SKZBangChan",
+            "FromFile": "Portraits/SKZBangChan.png"
+        },
+        {
+            "Action": "Load",
             "Target": "Characters/{{ModId}}_SKZFelix_Winter",
             "FromFile": "Characters/SKZFelixWinter.png"
         },
@@ -25,6 +35,11 @@
             "Action": "Load",
             "Target": "Characters/Dialogue/{{ModId}}_SKZFelix",
             "FromFile": "Dialogue/SKZFelix.json"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/Dialogue/{{ModId}}_SKZBangChan",
+            "FromFile": "Dialogue/SKZBangChan.json"
         },
         {
             "Action": "Load",
@@ -132,7 +147,7 @@
                                 "X": 6,
                                 "Y": 5
                             },
-                            "Direction": "right"
+                            "Direction": "down"
                         }
                     ],
                     "Appearance": [
@@ -152,6 +167,38 @@
                             "Precedence": -1
                         }
                     ]
+                },
+                "{{ModId}}_SKZBangChan": {
+                    "DisplayName": "Bang Chan",
+                    "BirthSeason": "Spring",
+                    "BirthDay": 14,
+                    "HomeRegion": "Town",
+                    "Gender": "Male",
+                    "Age": "Adult",
+                    "Manner": "Polite",
+                    "SocialAnxiety": "Neutral",
+                    "Optimism": "Positive",
+                    "CanBeRomanced": true,
+                    "Home": [
+                        {
+                            "Id": "Default",
+                            "Location": "StayHotelFelix",
+                            "Tile": {
+                                "X": 6,
+                                "Y": 7
+                            },
+                            "Direction": "down"
+                        }
+                    ],
+                    "Appearance": [
+                        {
+                            "Id": "Default",
+                            "Interval": "Any",
+                            "Portrait": "Portraits/{{ModId}}_SKZBangChan",
+                            "Sprite": "Characters/{{ModId}}_SKZBangChan",
+                            "Precedence": 2
+                        }
+                    ]
                 }
             }
         },
@@ -159,14 +206,18 @@
             "Action": "EditData",
             "Target": "Data/Events/Saloon",
             "Entries": {
-               "{{ModId}}_FelixEvent/f {{ModId}}_SKZFelix 0/Time 600 2600": "none/follow/farmer 14 23 0 {{ModId}}_SKZFelix 14 18 2/skippable/viewport 14 20 clamp/pause 500/move farmer 0 -2 0/speak {{ModId}}_SKZFelix \"Hey there.\"/end"
-
+                "{{ModId}}_FelixEvent/f {{ModId}}_SKZFelix 0/Time 600 2600": "none/follow/farmer 14 23 0 {{ModId}}_SKZFelix 14 18 2/skippable/viewport 14 20 clamp/pause 500/move farmer 0 -2 0/speak {{ModId}}_SKZFelix \"Hey there.\"/end"
             }
         },
         {
             "Action": "Load",
             "Target": "Characters/schedules/{{ModId}}_SKZFelix",
-            "FromFile": "Schedule/schedule.json"
+            "FromFile": "Schedule/scheduleFelix.json"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/schedules/{{ModId}}_SKZBangChan",
+            "FromFile": "Schedule/scheduleBangChan.json"
         },
         {
             "Action": "EditData",
