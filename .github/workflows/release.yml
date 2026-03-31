@@ -72,9 +72,11 @@ jobs:
           else
             git log $latest_tag..HEAD --pretty=format:"* %s" > PATCH_NOTES.txt
           fi
-          echo 'patch_notes<<EOF' >> $GITHUB_OUTPUT
-          cat PATCH_NOTES.txt >> $GITHUB_OUTPUT
-          echo 'EOF' >> $GITHUB_OUTPUT
+          PATCH_NOTES=$(cat PATCH_NOTES.txt)
+          PATCH_NOTES="${PATCH_NOTES//'%'/'%25'}"
+          PATCH_NOTES="${PATCH_NOTES//$'\n'/'%0A'}"
+          PATCH_NOTES="${PATCH_NOTES//$'\r'/'%0D'}"
+          echo "patch_notes=$PATCH_NOTES" >> $GITHUB_OUTPUT
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
