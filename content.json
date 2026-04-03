@@ -206,7 +206,106 @@
             "Action": "EditData",
             "Target": "Data/Events/Saloon",
             "Entries": {
-                "{{ModId}}_FelixEvent/f {{ModId}}_SKZFelix 0/Time 600 2600": "none/follow/farmer 14 23 0 {{ModId}}_SKZFelix 14 18 2/skippable/viewport 14 20 clamp/pause 500/move farmer 0 -2 0/speak {{ModId}}_SKZFelix \"Hey there.\"/end"
+                "{{ModId}}_FelixEvent/f {{ModId}}_SKZFelix 0/Time 600 2600": "none/follow/
+                farmer 14 23 0 {{ModId}}_SKZFelix 14 18 2/
+                skippable/
+                viewport 14 20 clamp/
+           
+                move farmer 0 -2 0/
+                move {{ModId}}_SKZFelix 4 0 2/
+       
+                speak {{ModId}}_SKZFelix \"oof.\"/
+
+                move {{ModId}}_SKZFelix -4 0 2/
+         
+                emote {{ModId}}_SKZFelix 12/
+
+                move {{ModId}}_SKZFelix -4 0 2/
+     
+                speak {{ModId}}_SKZFelix \"mmmmm...\"/
+
+                move {{ModId}}_SKZFelix 4 0 2/
+                emote {{ModId}}_SKZFelix 12/
+                speak {{ModId}}_SKZFelix \"Just a little...\"/
+
+                move {{ModId}}_SKZFelix 1 0 2/
+                emote {{ModId}}_SKZFelix 12/
+                speak {{ModId}}_SKZFelix \"Wait Huh?\"/
+
+                move {{ModId}}_SKZFelix -1 0 2/
+                pause 50/
+                speak {{ModId}}_SKZFelix \"... \"/
+                speak {{ModId}}_SKZFelix \"Oh! Hey @ were you hoping to get a drink? \"/
+                speak {{ModId}}_SKZFelix \"I guess Gus didn’t tell you, he’s closed right now. \"/
+                speak {{ModId}}_SKZFelix \"For the first time in like five years, man’s dedicated. \"/
+                speak {{ModId}}_SKZFelix \"But hey, I can make it up for you, Gus said I could use his kitchen while he was away since my hotel doesn’t have one. \"/
+                speak {{ModId}}_SKZFelix \"I’m making brownies! Come try some! \"/
+                speed farmer 3/
+                move farmer -2 0 3/
+                move farmer 0 -1 0/
+                move farmer -6 0 3/
+                move {{ModId}}_SKZFelix 0 0 3 true/
+                move farmer 0 -3 0/
+                move farmer 7 0 1/
+                move farmer 0 1 2/
+                move {{ModId}}_SKZFelix 0 0 2/
+                speak {{ModId}}_SKZFelix \"I’m not exactly used to Gus' kitchen, I couldn’t find anything in here. Hopefully he doesn’t get mad.\"/
+                speak {{ModId}}_SKZFelix \"But the brownies should be good, here have some.\"/
+                farmerEat 731/
+                pause 1500/
+                emote farmer 32/
+                glow 128 0 128 true/
+                positionOffset farmer 1 1/
+                positionOffset farmer -1 -1/
+                positionOffset farmer -1 1/
+                positionOffset farmer 1 -1/
+                positionOffset farmer 1 1/
+                positionOffset farmer -1 -1/
+                positionOffset farmer -1 1/
+                positionOffset farmer 1 -1/
+                positionOffset farmer 1 1/
+                positionOffset farmer -1 -1/
+                positionOffset farmer -1 1/
+                positionOffset farmer 1 -1/
+                positionOffset farmer 1 1/
+                positionOffset farmer -1 -1/
+                positionOffset farmer -1 1/
+                positionOffset farmer 1 -1/
+                positionOffset farmer 1 1/
+                positionOffset farmer -1 -1/
+                positionOffset farmer -1 1/
+                positionOffset farmer 1 -1/
+                positionOffset farmer 1 1/
+                positionOffset farmer -1 -1/
+                positionOffset farmer -1 1/
+                positionOffset farmer 1 -1/
+                positionOffset farmer 1 1/
+                positionOffset farmer -1 -1/
+                positionOffset farmer -1 1/
+                positionOffset farmer 1 -1/
+                positionOffset farmer 1 1/
+                positionOffset farmer -1 -1/
+                positionOffset farmer -1 1/
+                positionOffset farmer 1 -1/
+                speak {{ModId}}_SKZFelix \"Wow! You must really like it! I want to give these to everyone in the valley to thank them for being so welcoming.\"/
+                stopglowing/
+                speak {{ModId}}_SKZFelix \"Its small but hopefully it will mean something.\"/
+                speak {{ModId}}_SKZFelix \"Well, maybe not to Gus.\"/
+                speed {{ModId}}_SKZFelix 5/
+                move {{ModId}}_SKZFelix 0 -1 0/
+                speed {{ModId}}_SKZFelix 5/
+                move {{ModId}}_SKZFelix -8 0 3/
+                speed {{ModId}}_SKZFelix 5/
+                move {{ModId}}_SKZFelix 0 3 2/
+                speed {{ModId}}_SKZFelix 5/
+                move {{ModId}}_SKZFelix 6 0 1/
+                speed {{ModId}}_SKZFelix 5/
+                move {{ModId}}_SKZFelix 0 1 2/
+                speed {{ModId}}_SKZFelix 5/
+                move {{ModId}}_SKZFelix 2 0 1/
+                speed {{ModId}}_SKZFelix 5/
+                move {{ModId}}_SKZFelix 0 3 2/
+                end"
             }
         },
         {
