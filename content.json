@@ -69,6 +69,31 @@
                 }
             }
         },
+
+          {
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "Entries": {
+                "{{ModId}}_Brownie": {
+                    "Name": "{{ModId}}_Brownie", 
+                    "Displayname": "Felix's Brownie",
+                    "Description": "♫ Brownie, brownie, brownie~ ♪",
+                    "Type": "Cooking",
+                    "Category": -7,
+                    "Price": 200,
+                    "Texture": "Maps/{{ModId}}_SKZTilesheet",
+                    "SpriteIndex": 0,
+                    "Edibility": 40
+                }
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/CookingRecipes",
+            "Entries": {
+                "{{ModId}}_Brownie": "176 2 245 1 246 1/25 5/{{ModId}}_Brownie/f {{ModId}}_SKZFelix 2/"
+            }
+        },
         {
             "Action": "EditData",
             "Target": "Data/Locations",
@@ -206,32 +231,24 @@
             "Action": "EditData",
             "Target": "Data/Events/Saloon",
             "Entries": {
-                "{{ModId}}_FelixEvent/f {{ModId}}_SKZFelix 0/Time 600 2600": "none/follow/
+                "{{ModId}}_FelixEvent2/f {{ModId}}_SKZFelix 500/Time 600 2600": "none/follow/
                 farmer 14 23 0 {{ModId}}_SKZFelix 14 18 2/
                 skippable/
                 viewport 14 20 clamp/
-           
+                addCookingRecipe {{ModId}}_Brownie/
                 move farmer 0 -2 0/
                 move {{ModId}}_SKZFelix 4 0 2/
-       
                 speak {{ModId}}_SKZFelix \"oof.\"/
-
                 move {{ModId}}_SKZFelix -4 0 2/
-         
                 emote {{ModId}}_SKZFelix 12/
-
                 move {{ModId}}_SKZFelix -4 0 2/
-     
                 speak {{ModId}}_SKZFelix \"mmmmm...\"/
-
                 move {{ModId}}_SKZFelix 4 0 2/
                 emote {{ModId}}_SKZFelix 12/
                 speak {{ModId}}_SKZFelix \"Just a little...\"/
-
                 move {{ModId}}_SKZFelix 1 0 2/
                 emote {{ModId}}_SKZFelix 12/
                 speak {{ModId}}_SKZFelix \"Wait Huh?\"/
-
                 move {{ModId}}_SKZFelix -1 0 2/
                 pause 50/
                 speak {{ModId}}_SKZFelix \"... \"/
@@ -308,6 +325,70 @@
                 end"
             }
         },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/Town",
+            "Entries": {
+                "{{ModId}}_FelixEvent4/f {{ModId}}_SKZFelix 1000/Time 900 1500": "none/follow/
+                farmer 37 58 1 {{ModId}}_SKZFelix 39 57 2/
+                skippable/
+                viewport 39 57 clamp/
+                move farmer 1 0 0/
+                move farmer 0 -1 1/
+                move {ModId}}_SKZFelix 0 0 3/
+                speak {{ModId}}_SKZFelix \"Oh, hi @!\"/
+                speak {{ModId}}_SKZFelix \"Do you know of any other stores around here besides Piere’s and Clint’s?\"/
+                speak {{ModId}}_SKZFelix \"I knew this town was remote but only two stores is really crazy.\"/
+                move {ModId}}_SKZFelix 0 0 2/
+                speak {{ModId}}_SKZFelix \"What I want is...\"/
+                pause 500/
+                move {ModId}}_SKZFelix 0 0 3
+                speak {{ModId}}_SKZFelix \"New keyboard switches...\"/
+                move {ModId}}_SKZFelix 0 0 2/
+                emote farmer 40/ 
+                pause 500/
+                move {ModId}}_SKZFelix 0 0 3/
+                speak {{ModId}}_SKZFelix \"I know, not much chance of finding it here, Piere looked at me as if I was speaking Korean when I asked him.\"/
+                emote farmer 28/ 
+                pause 500/
+                speak {{ModId}}_SKZFelix \"Robin owns a shop deep in the forest? I have no idea how to get there will you help me please?\"/
+                emote farmer 28/ 
+                pause 500/
+                fade true/
+                changeToTemporaryMap Mountain/
+                warp {{ModId}}_SKZFelix 12 26/
+                warp farmer 11 26/
+                move {{ModId}}_SKZFelix 0 0 2/
+                viewport 11 26 clamp/
+                pause 1000/
+                move farmer 0 0 1/
+                move {{ModId}}_SKZFelix 0 0 3/
+                emote {{ModId}}_SKZFelix 20/
+                speak {{ModId}}_SKZFelix \"Hey thanks for helping me today, Sebastian is a life saver.\"/
+                speak {{ModId}}_SKZFelix \"I’ll have to pay you back sometime soon.\"/
+                move {{ModId}}_SKZFelix 0 5 2/
+                end"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/Farm",
+            "Entries": {
+                "{{ModId}}_FelixEvent4/f {{ModId}}_SKZFelix 1000/Time 900 1500": "none/follow/
+                farmer 64 15 2 {{ModId}}_SKZFelix 64 16 0/
+                skippable/
+                viewport 64 15 clamp/
+                speak {{ModId}}_SKZFelix \"@!!\"/
+                speak {{ModId}}_SKZFelix \"Mayor Lewis just hunted me down like it was sport!\"/
+                speak {{ModId}}_SKZFelix \"He wants me to represent Pelican Town in the Zuzu city tour of Miss Ferngill.\"/
+                speak {{ModId}}_SKZFelix \"What does that even mean?? He knows I’m a man, right?\"/
+                speak {{ModId}}_SKZFelix \"I hate to ask for your help again, but it’s not a JYP event, so I won’t have my stylist—and you always dress so nicely even though you farm every day.\"/
+                speak {{ModId}}_SKZFelix \"If there’s anyone who can help me represent Pelican Town its you!\"/
+                end"
+            }
+        },
+
+        
         {
             "Action": "Load",
             "Target": "Characters/schedules/{{ModId}}_SKZFelix",
