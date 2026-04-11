@@ -392,7 +392,7 @@
             "Action": "EditData",
             "Target": "Data/Events/Farm",
             "Entries": {
-                "{{ModId}}_FelixEvent4/f {{ModId}}_SKZFelix 1500/Time 900 1500": "none/follow/
+                "{{ModId}}_FelixEvent6/f {{ModId}}_SKZFelix 1500/Time 900 1500": "none/follow/
                 farmer 64 15 2 {{ModId}}_SKZFelix 64 16 0/
                 skippable/
                 viewport 64 15 clamp/
@@ -405,24 +405,71 @@
                 end"
             }
         },
-
         {
             "Action": "EditData",
             "Target": "Data/Events/BusStop",
             "Entries": {
-                "{{ModId}}_FelixEvent4/f {{ModId}}_SKZFelix 2000/Time 900 1500": "none/follow/
-                farmer 64 15 2 {{ModId}}_SKZFelix 64 16 0/
+                "{{ModId}}_FelixEvent8/f {{ModId}}_SKZFelix 2000/Time 900 1500": "none/follow/
+                farmer 21 16 0 {{ModId}}_SKZFelix 21 11 2/
                 skippable/
-                viewport 64 15 clamp/
+                viewport 19 11 clamp/
+                move farmer 0 -3 0/
+                emote {{ModId}}_SKZFelix 16/
+                pause 500/
+                move farmer 0 0 0/
                 speak {{ModId}}_SKZFelix \"@!!\"/
-                speak {{ModId}}_SKZFelix \"Mayor Lewis just hunted me down like it was sport!\"/
-                speak {{ModId}}_SKZFelix \"He wants me to represent Pelican Town in the Zuzu city tour of Miss Ferngill.\"/
-                speak {{ModId}}_SKZFelix \"What does that even mean?? He knows I’m a man, right?\"/
-                speak {{ModId}}_SKZFelix \"I hate to ask for your help again, but it’s not a JYP event, so I won’t have my stylist—and you always dress so nicely even though you farm every day.\"/
-                speak {{ModId}}_SKZFelix \"If there’s anyone who can help me represent Pelican Town its you!\"/
+                speak {{ModId}}_SKZFelix \"You need to hurry!\"/
+                speak {{ModId}}_SKZFelix \"The bus is about to leave for the fashion show!\"/
+                emote farmer 16/
+                globalFade/
+                viewport 1000 1000 /
+                pause 2000/
+                playSound busDriveOff/
+                speak {{ModId}}_SKZFelix \"Here we go.\"/
+                pause 500/
+                playSound explosion/
+                pause 100/
+                speak {{ModId}}_SKZFelix \"What was that!\"/
+                pause 500/
+                changeToTemporaryMap {{ModId}}_BusMove/
+                viewport 1000 1000/
+                pause 200/
+                warp farmer 50 6/
+                warp {{ModId}}_SKZFelix 51 5/
+                globalFade 1 false/
+                viewport 49 7 clamp/
+                globalFadeToClear 0.007 false/
+                speak {{ModId}}_SKZFelix \"Wow that was really scary.\"/
+                speak {{ModId}}_SKZFelix \"I was feeling a little conflicted about joining this show at first. Considering I’m not from Pelican town it’s a little weird that Mayor Lewis asked me.\"/
+                speak {{ModId}}_SKZFelix \"But now that we got to spend so much time together, I’m glad he asked me.\"/
+                speak {{ModId}}_SKZFelix \"It does feel like the members, and I have been welcomed with open arms by the people here.\"/
+                speak {{ModId}}_SKZFelix \"You most of all.\"/
+                speak {{ModId}}_SKZFelix \"This project has taken so much longer than we expected.\"/
+                speak {{ModId}}_SKZFelix \"I’m glad that you’ve been here for all this time. Thank you.\"/
+                pause 2000/
+                speak {{ModId}}_SKZFelix \"I’m happy to represent Pelican town.\"/
+                speak {{ModId}}_SKZFelix \"You most of all.\"/
+                playSound busDriveOff/
+                speak {{ModId}}_SKZFelix \"Oh! Looks like the bus is back in action!\"/
+                globalFade 0.007 false/
+                viewport 1000 1000/
+                pause 1000/
+                changeToTemporaryMap SamShow/
+                viewport 1000 1000/
+                warp farmer 18 16/
+                warp {{ModId}}_SKZFelix 18 14/
+                move farmer 0 0 0/
+                move {{ModId}}_SKZFelix 0 0 2/
+                globalFade 1 false/
+                viewport 18 14 clamp/
+                globalFadeToClear 0.007 false/
+                /message \"And representing Pelican town, Felix Lee!\"/
+                speak {{ModId}}_SKZFelix \"Thank you everyone!\"/    
                 end"
             }
         },
+
+       
 
         
         {
